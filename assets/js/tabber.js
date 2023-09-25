@@ -46,14 +46,28 @@ jQuery(".foodtech_slider").owlCarousel({
 
   jQuery(".foodtech_slider-single").owlCarousel({
     autoplay: false,
-    items:1,
-    loop:true,
     rewind: true, /* use rewind if you don't want loop */
     margin: 0,
+    loop:true,
+    center: true,
     responsiveClass: true,
     autoHeight: true,
     autoplayTimeout: 7000,
     smartSpeed: 800,
     nav: true,
-    slideBy:1
+    responsive: {
+      0: {
+        items: 1
+      },
+  
+      1199: {
+        items: 1
+      },
+  
+      1200: {
+        items: 1
+      }
+  
+    
+    }
   });
