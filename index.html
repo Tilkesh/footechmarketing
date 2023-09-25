@@ -698,7 +698,35 @@
   /*on-top button end*/
 
 
+    .slider2_img_wr {
+        width: 689px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /*animation start*/
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  /*animation end*/
+
+
   /*  media query start*/
+
+  section.design_tab.col-8.wow.slideInUp.animated {
+      width: 80%;
+  }
+
   @media only screen and (max-width: 1200px) {
     ol, ul {
         padding-left: 0rem;
@@ -748,23 +776,199 @@
     }
 
   }
-  /*  media query end*/
 
-  /*animation start*/
 
-  @keyframes zoom-in-zoom-out {
-    0% {
-      transform: scale(1, 1);
+  @media only screen and (max-width: 999px) {
+
+    span.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M4 6H20M4 12H20M4 18H20' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     }
-    50% {
-      transform: scale(1.5, 1.5);
+
+    section.design_tab.col-8.wow.slideInUp.animated {
+        width: 100%;
     }
-    100% {
-      transform: scale(1, 1);
+
+
+    .card_mobile_store div img {
+        width: 100% !important;
+        height: auto !important;
+        position: absolute;
+        bottom: 0px;
+        padding: 0 20px;
     }
+
+
+    .card_mobile_store {
+        position: relative;
+    }
+
+    .design_sec.flex.col-12 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-4.first {
+        width: 50%;
+    }
+
+    .col-4.second{
+        width: 50%;
+    }
+
+    .col-4.third {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .col-4.third img {
+        width: 70% !important;
+        right: 0px !important;
+        position: absolute !important;
+        left: unset !important;
+    }
+
+    .design_sec_txt:after {
+        display: none;
+    }
+
+    .design_sec_txt_nodescription:after {
+        display: none;
+    }
+
+
+
+
+    
+
+
   }
 
-  /*animation end*/
+
+  @media only screen and (max-width: 512px) {
+
+    .main-sec {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-sec .col-8 {
+        width: 100%;
+        order: 2;
+        margin-top: 16px;
+    }
+
+    .main-sec .col-4 {
+        width: 100%;
+        padding: 0% 15%;
+    }
+
+    .build_wr.col-12 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .build_wr.col-12 .col-4 h3 {
+        text-align: center;
+    }
+
+    .build_url_wr.col-8 {
+        margin-top: 0px;
+    }
+
+    .build_url_wr.col-8 ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buy_bt {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buy_bt a {
+        font-size: 12px;
+        padding: 12px 60px;
+        border-radius: 50px;
+    }
+
+    .design_sec .col-3 {
+        display: none;
+    }
+
+    .design_sec .col-6 {
+        width: 100%;
+    }
+
+    .feature-wp .col-6, .feature .col-6 {
+        width: 100%;
+    }
+
+    .design_sec .col-2 {
+        display: none;
+    }
+
+    .design_sec .col-8 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab-navigation {
+        margin: 8px 0px;
+    }
+
+    ul.tab-navigation li a {
+        font-size: 16px;
+    }
+
+    .tab-navigation li {
+        padding: 10px 16px;
+    }
+
+
+    .tooltip_t.contents {
+        display: none;
+    }
+
+    .col-4.first {
+        width: 100%;
+    }
+
+    .col-4.second {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .first .card_mobile_store div img, .second .card_mobile_store div img {
+        max-width: 330px;
+    }
+
+    .col-4.third img {
+        width: 100% !important;
+        right: 0px !important;
+        position: absolute !important;
+        left: unset !important;
+    }
+
+    .slider2_img_wr {
+        width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    section.mob {
+        margin-top: 40px !important;
+    }
+
+
+  }
+
+
+
+  /*  media query end*/
+
+
 
       </style>
   </head>
@@ -832,15 +1036,12 @@
               </ul>
               </div>
             </div>
-            <div>
+            <div class="buy_bt">
               <a class="buynow_bt mt-4" href="#" title="" target="_blank">BUY NOW</a>
             </div>
           </div>
           <div class="col-4 wow fadeInRight">
             <img src="heroimage.png">
-          </div>
-          <div>
-            
           </div>
         </div>
       </section>
@@ -1446,7 +1647,7 @@
       <!-- apps and features end -->
 
       <!-- apps sliders start -->
-       <section style="margin-top: 140px;">
+       <section class="mob" style="margin-top: 140px;">
         <div class="design_sec col-12">
           <div class="col-2"></div>
           <div class="col-8 design_sec_txt_wp wow slideInUp">
@@ -1650,22 +1851,22 @@
                 
                <div class="owl-slider">
                  <div id="carousel" class="owl-carousel foodtech_slider-single">
-                   <div class="item" style="width: 689px;margin: 0 auto;">
+                   <div class="item">
                     <div class="slider2_img_wr">
                       <img src="assets/images/foodtech-admin-panel/01_preview_admin_panel.png" alt="">
                       </div>
                     </div>
-                    <div class="item" style="width: 689px;margin: 0 auto;">
+                    <div class="item">
                       <div class="slider2_img_wr">
                       <img src="assets/images/foodtech-admin-panel/02_preview_admin_panel.png" alt="">
                       </div>
                     </div>
-                    <div class="item" style="width: 689px;margin: 0 auto;">
+                    <div class="item">
                       <div class="slider2_img_wr">
                       <img src="assets/images/foodtech-admin-panel/03_preview_admin_panel.png" alt="">
                       </div>
                     </div>
-                    <div class="item" style="width: 689px;margin: 0 auto;">
+                    <div class="item">
                       <div class="slider2_img_wr">
                       <img src="assets/images/foodtech-admin-panel/01_preview_admin_panel.png" alt="">
                       </div>
@@ -1682,7 +1883,7 @@
       <!-- apps sliders end -->
 
       <!-- dashboard section start -->
-      <section style="margin-top: 140px;">
+      <section class="mob" style="margin-top: 140px;">
         <div class="design_sec col-12">
           <div class="col-2"></div>
           <div class="col-8 design_sec_txt_wp wow slideInUp">
@@ -1706,7 +1907,7 @@
       <!-- dashboard section end -->
 
       <!-- technology stack start -->
-      <section style="margin-top: 140px;">
+      <section class="mob" style="margin-top: 140px;">
         <div class="design_sec col-12" id="technologies">
           <div class="col-2"></div>
           <div class="col-8 design_sec_txt_wp wow slideInUp">
@@ -1730,7 +1931,7 @@
       <!-- technology stack end -->
 
       <!-- download app section start -->
-      <section style="margin-top: 140px;">
+      <section class="mob" style="margin-top: 140px;">
         <div class="design_sec col-12" id="demo">
           <div class="col-2"></div>
           <div class="col-8 design_sec_txt_wp wow slideInUp">
@@ -1741,8 +1942,8 @@
           </div>
           <div class="col-2"></div>
         </div>
-        <div class="design_sec col-12" style="margin-top: 40px; margin-bottom: 40px;">
-          <div class="col-4 wow zoomIn">
+        <div class="design_sec flex col-12" style="margin-top: 40px; margin-bottom: 40px;">
+          <div class="col-4 first wow zoomIn">
             <div class="card_mobile_store">
               <h6>Android</h6>
               <p>Download free app from play store</p>
@@ -1752,7 +1953,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4 wow zoomIn">
+          <div class="col-4 second wow zoomIn">
             <div class="card_mobile_store">
               <h6>iOS</h6>
               <p>Download free app from app store</p>
@@ -1762,7 +1963,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4 wow zoomIn">
+          <div class="col-4 third wow zoomIn">
             <div class="card_mobile_store">
                 <div style="position: relative;min-height: 457px;max-height: 457px;">
               <h6>Admin Dashboard</h6>
