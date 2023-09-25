@@ -1,0 +1,2014 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodTech</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
+
+    <style type="text/css">
+
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+      body{
+        font-family: 'Josefin Sans', sans-serif;
+        color: #fff;
+        background-color: #141414;
+      }
+
+      /*navigation section start*/
+
+      nav.navbar.navbar-expand-lg.bg-body-tertiary {
+      background-color: black !important;
+      color: white;}
+
+      li.nav-item .active {
+        color: #ff6738 !important;
+      }
+
+      li.nav-item a {
+        color: #fff;
+      }
+
+      li.nav-item a:hover {
+        color: #ff6738;
+      }
+      
+      ul li a {
+      color: #f97e45;
+      }
+
+
+      /*navigation section end*/
+
+      img {width: 100%}
+      .main-sec {
+      display: flex;
+      margin-top: 100px;
+      }
+      .build_url_wr ul li {
+      display: inline-block;
+      padding: 0 5px;
+      }
+      .build_wr.col-12 {
+      display: flex;
+      }
+      a.buynow_bt {
+      padding: 12px 20px;
+      border-color: #FF6738;
+      background: #FF6738;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-block;
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      transition: ease-in-out 0.6s all;
+      position: relative;
+      z-index: 1;
+      }
+
+      a.buynow_bt:before {
+          position: absolute;
+          content: '';
+          background: linear-gradient(201deg, #000000, #e94221);
+          right: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          z-index: -1;
+          opacity: 0;
+          visibility: visible;
+          transition: ease-in-out 0.3s all;
+          border-radius: 5px;
+      }
+
+
+      a.buynow_bt:hover:before {
+          opacity: 1;
+          visibility: visible;
+          width: 100%;
+      }
+
+
+
+
+
+      .design_sec.col-12 {
+     display: flex;}
+
+     .design_sec_txt h1, .design_sec_txt p {
+    text-align: center;
+    }
+
+    .design_sec_txt:after {
+    position: absolute;
+    content: "";
+    background: url(underline2.png) no-repeat center center;
+    width: 100%;
+    height: 10px;
+    left: 0px;
+    right: 0;
+    top: 82px;
+    margin: 0 auto;
+    }
+    .col-6.design_sec_txt_wp {
+    position: relative;
+    margin-top: 60px;
+    }
+    section.design_tab.col-8 {
+    margin: 0 auto;
+    margin-top: 60px;
+    }
+
+    /*tooltip css start*/
+
+    
+
+    .img-maps .contents .info-box {
+    width: 44px;
+    height: 44px;
+    }
+
+
+    .img-maps .contents .info-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        min-width: 30px;
+        min-height: 30px;
+    }
+
+
+
+    .img-maps .contents .info-box:before, .img-maps .contents .info-box:after {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        background: #fff;
+    }
+
+     .img-maps .contents .info-box:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 36px;
+        text-align: center;
+        color: #fff;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .img-maps .contents .info-box:before {
+        content: '+';
+    }
+
+    .img-maps .contents .info-box:after {
+        content: '';
+        animation: zoom-in-zoom-out 2s linear infinite;
+    }
+
+
+    .img-maps .contents .info-box:before, .img-maps .contents .info-box:after {
+        
+        position: absolute;
+        border-radius: 50px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .ra_pointer_tooltip_restaurant-app.info-box:before {
+        color: #ffffff !important;
+    }
+
+    .ra_pointer_tooltip_restaurant-app.info-box:before, .ra_pointer_tooltip_restaurant-app.info-box:after {
+        background-color: #000000 !important;
+    }
+
+    .img-maps .contents .info-box.align-bottom:hover .info-box-contents {
+        -webkit-transform: translateY(100%) translateX(50%);
+        transform: translateY(100%) translateX(50%);
+    }
+
+    .img-maps .contents .info-box.align-bottom .info-box-contents {
+        position: absolute;
+        top: auto;
+        right: 50%;
+        bottom: -20px;
+        -webkit-transform: translateY(115%) translateX(50%);
+        transform: translateY(115%) translateX(50%);
+    }
+
+    .img-maps .contents .info-box:hover .info-box-contents {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transform: translateY(-100%) translateX(50%);
+        transform: translateY(-100%) translateX(50%);
+    }
+
+    .img-maps .contents .info-box .info-box-contents {
+        background: #fff;
+        width: 240px;
+        position: absolute;
+        top: -20px;
+        right: 50%;
+        -webkit-transform: translateX(50%) translateY(-115%);
+        transform: translateX(50%) translateY(-115%);
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+        z-index: 10;
+        padding: 20px;
+        -webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.07);
+        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.07);
+        text-align: center;
+        background-image: linear-gradient(141deg, #000000, #e94221);
+    }
+
+    .img-maps .contents .info-box .info-box-contents:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+        z-index: 0;
+    }
+
+   
+
+  
+
+    
+
+    .img-maps .contents .info-box:hover:after {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    
+
+    .img-maps .contents .info-box:after {
+        z-index: 0;
+        opacity: 0.5;
+        -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .contents .info-box:after {
+        left: 0px !important;
+        top: 0px !important;
+    }
+
+    
+
+    .img-maps .contents .info-box:hover h3, .img-maps .contents .info-box:hover p {
+        opacity: 1;
+        color: white;
+        -webkit-transform: translate(0) !important;
+        transform: translate(0) !important;
+    }
+
+    .img-maps .contents .info-box p {
+        font-size: 1.1em;
+        text-align: left;
+    }
+
+    .img-maps .contents .info-box p {
+        font-size: .92857em;
+        line-height: 1.69231em;
+        margin-bottom: 0;
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+    }
+
+    .img-maps .contents .info-box h3, .img-maps .contents .info-box p {
+        opacity: 0;
+        -webkit-transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    div#ra_tooltiped_image {
+    position: relative;
+    }
+
+    .img-maps .contents .info-box:hover::before {
+    transform: translateX(-50%) translateY(-50%) rotate(138deg);
+    transition: all 0.3s linear;
+    }
+
+    .info-box-contents h3 {
+    font-size: 1.73rem;
+    }
+
+    .design_sec_txt_nodescription h1 {
+    text-align: center;
+    }
+
+    .design_sec_txt_nodescription:after {
+    position: absolute;
+    content: "";
+    background: url(underline2.png) repeat-x center center;
+    width: 80%;
+    height: 10px;
+    left: 0px;
+    right: 0;
+    top: 50px;
+    margin: 0 auto;
+    }
+
+    /*tooltip css end*/
+
+    /*card design start*/
+    .f-card span img {
+    width: 60px;
+    position: absolute;
+    top: -30px;
+    right: -5px;
+    }
+
+    .feature-wp {
+    margin-top: 40px;
+    }
+
+    .f-card {
+    background: #ff6738;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px;
+    position: relative;
+    background-image: linear-gradient(201deg, #000000, #e94221);
+    }
+
+    p.fea_description {
+    margin: 0px;
+    }
+
+    p.feature_title {
+    font-weight: 600;
+    font-size: 24px;
+    }
+
+    .f-card.min-h {
+    min-height: 164px;
+    }
+
+    .rp875:after{
+    width: 47% !important;
+    }
+    
+    .design_sec_txt_nodescription.rp873:after {
+    width: 67% !important;
+    }
+
+    .design_sec_txt_nodescription.rp874:after {
+    width: 67% !important;
+    }
+
+    .design_sec_txt_nodescription.rp876:after {
+    width: 32% !important;
+    }
+
+    .design_sec_txt_nodescription{
+    position: relative;
+    }
+
+    /*slider start*/
+
+
+.center_wrapper {
+    margin: 0 auto;
+    width: 1012px;
+}
+    
+.access_bonuses_wr {
+    text-align: center;
+        margin-top: 50px;
+}
+   
+.common_heading {
+    font-size: 37px;
+    line-height: 47px;
+    font-family: 'Lato';
+    text-transform: capitalize;
+    font-weight: 900;
+    position: relative;
+    color: #000;
+    z-index: 60;
+}
+.common_heading:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: rgb(224 219 219 / 39%);
+    left: 0;
+    bottom: -7px;
+    right: 0;
+    margin: 0 auto;
+    z-index: -46;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.reveal2{
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 3s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+.tab-navigation{
+    padding: 0;
+    margin: 35px 0px;
+    list-style-type: 0;
+    text-align: center;
+}
+.tab-navigation li {
+    text-align: center;
+    padding: 12px 24px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s;
+    margin-left: 12px;
+    border-radius: 50px;
+}
+.tab-navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.tab-navigation li.active{
+    background:  #e6662c;
+}
+.container_area{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.tab-content .tab-content2{
+    padding: 10px;
+    color: #000;
+    display: none;
+}
+.tab_content_third ,.tab_content_fourth ,.tab_content_fifth {
+        padding: 0px 0px;
+        display: none;
+}
+.tab_content_first {
+    padding: 0px 0px;
+    /* text-align: center; */
+}
+.tab_content_second {
+    display: none;
+    padding: 0px 0px;
+}
+
+/*.owl-item .item img {
+    -webkit-transition: 0.3s;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: scale(0.80);
+    -ms-transform: scale(0.80);
+    transform: scale(0.80);
+}*/
+
+.owl-item.active {
+    
+    opacity: 0.4;
+}
+
+.owl-item.active.center{
+    opacity: 1;
+}
+
+.owl-item .item img {
+    padding: 20px;
+}
+
+/*.owl-item.center .item img {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}*/
+
+  .tab-navigation li:hover {
+    color: #e6662c;
+  }
+
+  .tab-navigation li.active:hover {
+    color: white;
+  }
+
+  .foodtech_slider-single .owl-item.active {
+      opacity: 1;
+  }
+
+  .design_sec_txt_nodescription.rp877:after{
+      width: 49% !important;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
+    width: 40px;
+    height: 40px;
+    background-color: #e6662c;
+    border-radius: 50px;
+    margin: 0px 20px;
+    color: #fff;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff29;
+    border-radius: 50px;
+    margin: 0px 20px;
+    color: #e6662c;
+  }
+
+
+  .owl-carousel .owl-nav button.owl-prev span, .owl-carousel .owl-nav button.owl-next span {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+    /*slider end*/
+
+  .design_sec_txt_nodescription.rp888:after {
+      bottom: -16px;
+      top: unset;
+      width: 97%;
+  }
+
+  .design_sec_txt_nodescription.rp888 {
+    text-align: center;
+  }
+
+  .design_sec_txt_nodescription.rp889:after {
+      bottom: -16px;
+      top: unset;
+      width: 79%;
+  }
+
+  .design_sec_txt_nodescription.rp889 {
+    text-align: center;
+  }
+
+  .design_sec_txt_nodescription.rp890 {
+    text-align: center;
+  }
+
+  .design_sec_txt_nodescription.rp890:after {
+      bottom: -16px;
+      top: unset;
+      width: 79%;
+  }
+
+  a.app_stors img {
+    height: 48px;
+    width: auto;
+    margin: 12px 0px 30px 0px;
+  }
+
+  .card_mobile_store {
+    background-image: linear-gradient(317deg, #000000, #e94221);
+    margin: 0px 16px;
+    border-radius: 12px;
+    padding: 20px 20px 0px 20px;
+    min-height: 477px;
+    max-height: 477px;
+    overflow: hidden;
+  }
+
+  .card_mobile_store img {
+    height: 300px;
+    width: auto;
+  }
+
+  .card_mobile_store h6 {
+    font-size: 28px;
+  }
+
+  .card_apm {
+    display: flex;
+  }
+
+  .card_apm p {
+    margin-bottom: 0px;
+  }
+
+  .card_apm p.mr-1 {
+    width: 90px;
+  }
+
+  .card_apm a {
+    color: #fff;
+  }
+
+  .info-box-contents a {
+      float: right;
+      text-decoration: none;
+      color: #fff;
+      line-height: 12px;
+      font-size: 12px;
+      margin-top: 8px;
+      cursor: pointer;
+      position: relative;
+  }
+
+  .info-box-contents a:hover{
+    color: #fff;
+    text-decoration: 4px dotted underline !important;
+    text-decoration-color: #f9803b !important;
+    cursor: pointer;
+  }
+
+  footer {
+    background: #000;
+    padding: 1.5rem;
+    margin-top: 100px;
+  }
+
+  footer p{
+    margin: 0px;
+    text-align: center;
+  }
+
+  .design_sec_txt_nodescription.rp889:after {
+    bottom: -16px;
+    top: unset;
+    width: 66%;
+  }
+
+  /*on-top button start*/
+
+  #myBtn_ontop {
+    display: none;
+        position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #3a3a3a91;
+    color: #e6662c;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 43px;
+  }
+
+  #myBtn_ontop:hover {
+    background-image: linear-gradient(317deg, #000000, #e94221);
+    color: #fff;
+  }
+
+  /*on-top button end*/
+
+
+  /*  media query start*/
+  @media only screen and (max-width: 1200px) {
+    ol, ul {
+        padding-left: 0rem;
+    }
+
+    .h1, h1 {
+        font-size: calc(1rem + 1vw);
+    }
+
+    .h3, h3 {
+    font-size: calc(.8rem + .6vw);
+    }
+
+    p.feature_title {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .design_sec_txt_nodescription:after {
+        top: 35px;
+    }
+
+    .design_sec_txt:after {
+    top: 70px;
+    }
+
+    .f-card {
+        min-height: 180px;
+    }
+
+    .f-card.min-h {
+        min-height: 180px;
+    }
+
+    .tab-navigation li a {
+    font-size: 18px;
+    }
+
+    .center_wrapper {
+        margin: 0 auto;
+        width: 98%;
+    }
+    .slider_img_wr {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+  }
+  /*  media query end*/
+
+  /*animation start*/
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  /*animation end*/
+
+      </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="foodtech_logo.svg"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#technologies">Technologies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#demo">Demo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+      <!-- top section start  -->
+      <section>
+        <div class="main-sec col-12">
+          <div class="col-8 wow fadeInLeft">
+            <h1 style=""><strong>FoodTech</strong> - Fast & Beautiful Multi Restaurant Food Delivery System with <span style="background: -webkit-linear-gradient(138deg, rgb(249 134 59), rgb(249 97 59));-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 600;">Customer App</span> + <span style="background: -webkit-linear-gradient(138deg, rgb(249 134 59), rgb(249 97 59));-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 600;">Restaurant App</span> + <span style="background: -webkit-linear-gradient(138deg, rgb(249 134 59), rgb(249 97 59));-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 600;">Driver App</span></h1>
+            <p class="mt-4">Experience swifter and more dependable food deliveries through a white-label food delivery app. Address your customers' requirements and unlock greater business potential.</p>
+            <div class="build_wr col-12 mt-4">
+              <div class="col-4">
+              <h3 style="" class="">Android APKs</h3></div>
+              <div class="build_url_wr col-8">
+              <ul>
+              <li><a href="" rel="nofollow">User App</a></li>
+              <li><a href="" rel="nofollow">Restaurant App</a></li>
+              <li><a href="" rel="nofollow">Delivery Man / Driver App</a></li>
+              </ul>
+              </div>
+            </div>
+            <div class="build_wr col-12 mt-4">
+              <div class="col-4">
+              <h3 style="" class="">iOS TestFlight</h3></div>
+              <div class="build_url_wr col-8">
+              <ul>
+              <li><a href="" rel="nofollow">User App</a></li>
+              <li><a href="" rel="nofollow">Restaurant App</a></li>
+              <li><a href="" rel="nofollow">Delivery Man / Driver App</a></li>
+              </ul>
+              </div>
+            </div>
+            <div class="build_wr col-12 mt-4">
+              <div class="col-4">
+              <h3 style="" class="">Other Links</h3></div>
+              <div class="build_url_wr col-8">
+              <ul>
+              <li><a href="" rel="nofollow">Preview</a></li>
+              <li><a href="" rel="nofollow">Documentation</a></li>
+              </ul>
+              </div>
+            </div>
+            <div>
+              <a class="buynow_bt mt-4" href="#" title="" target="_blank">BUY NOW</a>
+            </div>
+          </div>
+          <div class="col-4 wow fadeInRight">
+            <img src="heroimage.png">
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- top section end -->
+      <!-- mobile design section start-->
+      <section>
+        <div class="design_sec col-12">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt">
+            <h1>FoodTech App Inclusions</h1>
+            <p>A complete food service & delivery solution</p>
+            </div>
+            
+          </div>
+          <div class="col-3">
+
+          </div>
+        </div>
+        <!-- image with tooltip start -->
+        <section class="design_tab col-8 wow slideInUp">
+        <div class="wpb_wrapper">
+          <div id="ra_tooltiped_image" class="img-maps ra_tooltiped_image">
+                <div>
+                  <div class="aspect-ratio-container" style="max-width: 1984px; max-height: 1198px;">
+                    <div class="aspect-ratio-fill padding-added progressive-image--is-loaded" style="">
+                      <img src="fdbannerimg.png" class="attachment-full size-full progressive__img progressive--is-loaded" alt="" decoding="async" data-rjs="fdbannerimg.png" fetchpriority="high" srcset="" sizes="(max-width: 1984px) 100vw, 1984px" data-progressive="fdbannerimg.png" data-offsetheight="452.8729838709678">
+                    </div>
+                  </div>
+                </div>
+            <div class="tooltip_t contents">
+              
+              
+              <!-- <style>.ra_pointer_tooltip_65000f83942a6{top:auto !important;right:auto !important;bottom:32% !important;left:42% !important;}.ra_pointer_tooltip_65000f83942a6.info-box:before, .ra_pointer_tooltip_65000f83942a6.info-box:after{background-color:#59595945 !important;}.ra_pointer_tooltip_65000f83942a6.info-box:before{color:#ffffff !important;}</style> -->
+
+              <!-- <div id="ra_pointer_tooltip_65000f83942a6" class="info-box ra_pointer_tooltip_65000f83942a6">
+                <div class="info-box-contents">
+                <h3>Customize with ease</h3>
+                <p>Flexible to customize the app homepage, easy to change the Design Layout, Logo, Colors, Image…</p>
+                </div>
+              </div> -->
+
+
+              <style>
+                .ra_pointer_tooltip_admin-panel{
+                top:3% !important;
+                right:0% !important;
+                bottom:0% !important;
+                left:38% !important;
+                }
+
+                .ra_pointer_tooltip_admin-panel.info-box:before, .ra_pointer_tooltip_admin-panel.info-box:after{
+                  background-image: linear-gradient(259deg, #fb6342, #fa914c) !important;
+                }
+
+                .ra_pointer_tooltip_admin-panel.info-box:before{
+                color:#ffffff !important;}
+              </style>
+
+
+              <div id="ra_pointer_tooltip_admin-panel" class="info-box align-bottom ra_pointer_tooltip_admin-panel">
+                <div class="info-box-contents">
+                <h3>Admin Panel</h3>
+                <p class="p1">Admin panel offers business owners an all-in-one solution for effortlessly managing their businesses.</p>
+                <a href="#admin_panel">Know More &#10095;</a>
+                </div>
+              </div> 
+
+
+
+              <style>
+                .ra_pointer_tooltip_restaurant-app{
+                top:16% !important;
+                right:0% !important;
+                bottom:0% !important;
+                left:65% !important;
+                  }
+                .ra_pointer_tooltip_restaurant-app.info-box:before, .ra_pointer_tooltip_restaurant-app.info-box:after{    background-image: linear-gradient(259deg, #fb6342, #fa914c) !important;}
+                .ra_pointer_tooltip_restaurant-app.info-box:before{
+                color:#ffffff !important;}
+              </style>
+              
+              <div id="ra_pointer_tooltip_restaurant-app" class="info-box align-bottom ra_pointer_tooltip_restaurant-app">
+                <div class="info-box-contents">
+                  <h3>Restaurant App</h3>
+                  <p>Our app simplifies food order management for both restaurant owners and vendors.</p>
+                  <a href="#restaurant_app">Know More &#10095;</a>
+                </div>
+              </div>
+
+
+              <style>
+                .ra_pointer_tooltip_driver-app{
+                top:42.2% !important;
+                right:0% !important;
+                bottom:0% !important;
+                left:20.4% !important;
+                  }
+                .ra_pointer_tooltip_driver-app.info-box:before, .ra_pointer_tooltip_driver-app.info-box:after{    background-image: linear-gradient(259deg, #fb6342, #fa914c) !important;}
+                .ra_pointer_tooltip_driver-app.info-box:before{
+                color:#ffffff !important;}
+              </style>
+              
+              <div id="ra_pointer_tooltip_driver-app" class="info-box align-bottom ra_pointer_tooltip_driver-app">
+                <div class="info-box-contents">
+                  <h3>Driver App</h3>
+                  <p>Driver App helps delivery personnel efficiently manage their food delivery orders in real-time, both current and incoming</p>
+                  <a href="#driver_app">Know More &#10095;</a>
+                </div>
+              </div>
+
+              <style>
+                  .ra_pointer_tooltip_customer-app{
+                  top:42% !important;
+                  right:0% !important;
+                  bottom:0% !important;
+                  left:93% !important;
+                    }
+                  .ra_pointer_tooltip_customer-app.info-box:before, .ra_pointer_tooltip_customer-app.info-box:after{    background-image: linear-gradient(259deg, #fb6342, #fa914c) !important;}
+                  .ra_pointer_tooltip_customer-app.info-box:before{
+                  color:#ffffff !important;}
+                </style>
+                
+                <div id="ra_pointer_tooltip_customer-app" class="info-box align-bottom ra_pointer_tooltip_customer-app">
+                  <div class="info-box-contents">
+                    <h3>Customer App</h3>
+                    <p>Our application allows customers to explore restaurant options and place orders for their preferred dishes at their convenience, from anywhere</p>
+                    <a href="#customer_app">Know More &#10095;</a>
+                  </div>
+                </div>
+
+
+            </div>
+          </div>
+      </div>
+
+              
+            </section>
+            <!-- image with tooltip end -->
+
+
+      </section>
+      <!-- mobile design section end -->
+
+
+      <!-- apps and features start-->
+      <section style="margin-top: 40px;">
+        <div class="design_sec col-12">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription" id="features">
+            <h1>Recent Additions to the App</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="language_icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Multilingual support with RTL</p>
+                  <p class="fea_description">This feature extends the user experience, ensuring effortless cross-language interactions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="sharebill_icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Share Bill</p>
+                  <p class="fea_description">Effortlessly split expenses with the App. Choose your share and payment method; the App handles the rest.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="schedule-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Schedule Order</p>
+                  <p class="fea_description">This feature, allowing you to craft your order and delivery time for the ultimate experience.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="paymentgateways_icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Multiple Payment Gateways</p>
+                  <p class="fea_description">Our app offers a range of payment gateways, ensuring smooth and convenient transactions for customers.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+       <section style="margin-top: 40px;">
+        <div class="design_sec col-12">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp873">
+            <h1>Standard App Features</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="map-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Google Map</p>
+                  <p class="fea_description">This feature enables flawless food order fulfillment with accurate location tracking for restaurants, customers, and drivers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="delivery-tracking-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Live Order and Delivery Tracking</p>
+                  <p class="fea_description">It allows customers to follow their food order in real-time until it reaches their doorstep.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="order-history-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Order Invoice & History</p>
+                  <p class="fea_description">It helps customer access and download invoices for their present and previous food orders.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card">
+                <span class="feature_icon"><img src="review-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Reviews and Ratings</p>
+                  <p class="fea_description">It helps users make informed choices by reading others' experiences, fostering trust in the app.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+   
+
+       <section style="margin-top: 40px;">
+        <div class="design_sec col-12" id="customer_app">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp874">
+            <h1>Customer App Features</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="products_listing_icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Products Listing</p>
+                  <p class="fea_description">It provides users with a detailed and organized display of available menu items, allowing them to view, select, and customize their food orders efficiently.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="product-category-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Categories</p>
+                  <p class="fea_description">This feature organizes menu items into distinct groups which makes it easier for users to browse and find the specific food items. It enhances the user experience.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="restaurant-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Multi-restaurant</p>
+                  <p class="fea_description">It allows users to order food from multiple restaurants within the same app, making it a convenient way to access diverse cuisines.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="shopping_cart_icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Shopping Cart</p>
+                  <p class="fea_description">It enables users to select multiple food items from various restaurants, review &customize them, and make payments in one convenient place before placing their orders.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="checklist-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Checkout Flow</p>
+                  <p class="fea_description">It is a series of steps users follow to complete their orders. From reviewing items, and delivery details, payment methods, confirmingorders, and receiving order updates.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="track-order-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Order Tracking</p>
+                  <p class="fea_description">It allows users to monitor the real-time status and location of their food orders, from preparation at the restaurant to delivery by a driver.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="login-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Login & Setup</p>
+                  <p class="fea_description">The initial step is where users create accounts or log in, providing personal information and preferences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="notification-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Push Notifications</p>
+                  <p class="fea_description">It keeps users informed and engaged with the app. Real-time alerts are sent to the app. Order updates, promotions, and important information.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </section>
+
+      <section style="margin-top: 40px;">
+        <div class="design_sec col-12" id="restaurant_app">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp875">
+            <h1>Restaurant App</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="accept-and-reject.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Accept and rejectorders</p>
+                  <p class="fea_description">It allows restaurant staff to accept or decline incoming food orders. It gives them control over managing their orders and ensures efficient order processing</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="orderhistory.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Order History</p>
+                  <p class="fea_description">It keeps a record of past customer orders. It allows users to review their previous orders, making it easier to reorder favorite items.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="manage-product.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Manage Products</p>
+                  <p class="fea_description">It enables restaurant staff to add, edit, or remove menu items and update their details, ensuring accurate and up-to-date information for customers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="profile-setting-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Profile & Settings</p>
+                  <p class="fea_description">It allows users and restaurant staff to view and customize their account information, including personal details, and app settings, for better experience.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section style="margin-top: 40px;">
+        <div class="design_sec col-12" id="driver_app">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp876">
+            <h1>Driver App</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="onlineoffline-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Go Online / Offline</p>
+                  <p class="fea_description">It enables drivers to switch the availability status. When 'Online,' they can receive delivery requests, and when 'Offline,' they won't receive any new requests.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="acceptreject-order-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Accept/ Reject order</p>
+                  <p class="fea_description">Drivers either agree to or decline incoming delivery requests. It gives them control over which orders they choose to fulfill.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="mapdirections.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Map Directions</p>
+                  <p class="fea_description">It provides real-time navigation instructions, guiding the driver to the delivery destination efficiently using maps and GPS technology.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="deliveryhistory.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Delivery history</p>
+                  <p class="fea_description">It keeps a record of their past deliveries. It allows drivers to review their completed orders, including details like delivery locations, times, and earnings.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section style="margin-top: 40px;">
+        <div class="design_sec col-12" id="admin_panel">
+          <div class="col-3"></div>
+          <div class="col-6 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp877">
+            <h1>Web Admin Panel</h1>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="col-12 feature-wp">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="users-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Users</p>
+                  <p class="fea_description">It enables administrators to manage and oversee user accounts, including customers, restaurant owners, and delivery drivers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="restaurants-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Restaurants</p>
+                  <p class="fea_description">It allows administrators to manage and monitor the restaurants that are part of the platform.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="user-settings-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">User Profile Setting</p>
+                  <p class="fea_description">It allows administrators to access and modify user profiles, including their personal information, preferences, and account settings.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="filter-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Restaurant Filters</p>
+                  <p class="fea_description">It enables administrators to set and manage filters that control how restaurants are displayed and categorized on the platform.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="food-category-list.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Food Category List</p>
+                  <p class="fea_description">It allows administrators to create, edit, and manage categories for food items offered by restaurants on the platform.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="food-list-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Food List</p>
+                  <p class="fea_description">It allows administrators to view, manage, and oversee the selection of food items offered by restaurants on the platform.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="order-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Orders</p>
+                  <p class="fea_description">It provides administrators with a comprehensive view of all orders placed on the platform.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="reviews-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Orders Review</p>
+                  <p class="fea_description">It allows administrators to view, manage, and oversee the selection of food items offered by restaurants on the platform.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-12 feature">
+          <div class="row">
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="driver-list-icon.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Driver List</p>
+                  <p class="fea_description">It provides administrators with an overview of all registered delivery drivers. It includes driver details and status monitoring.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 wow slideInUp">
+              <div class="f-card min-h">
+                <span class="feature_icon"><img src="map_integration.png"></span>
+                <div class="card-text">
+                  <p class="feature_title">Google Map Integration</p>
+                  <p class="fea_description">It allows administrators to configure and customize the integration of Google Maps within the app.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- apps and features end -->
+
+      <!-- apps sliders start -->
+       <section style="margin-top: 140px;">
+        <div class="design_sec col-12">
+          <div class="col-2"></div>
+          <div class="col-8 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp878">
+            <h1>Making the food delivery process easier</h1>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+    <div class="access_bonuses_wr wow slideInUp">
+          <div class="center_wrapper">
+            <ul class="tab-navigation">
+                  <li class="active"><a>Customer App</a></li>
+                  <li><a>Restaurant App</a></li>
+                  <li><a>Driver App</a></li>
+              <li><a>Admin</a></li>
+            </ul>
+          </div>
+            <div class="container_area">
+              <div class="tab-content tab_content_first">
+                <div class=" center_wrapper">
+                <div class="owl-slider">
+                  <div id="carousel" class="owl-carousel foodtech_slider">
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/01_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/02_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/03_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/04_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/05_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/06_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/07_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/08_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/09_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/10_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/11_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/12_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/13_preview_user.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_user/14_preview_user.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="tab-content tab_content_second">
+                <div class=" center_wrapper">
+                  
+                <div class="owl-slider">
+                  <div id="carousel" class="owl-carousel foodtech_slider">
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/01_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/02_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/03_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/04_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/05_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/06_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/07_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_providers_app/08_preview_providers.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              
+              </div>
+            </div>
+              <div class="tab-content tab_content_third">
+              <div class=" center_wrapper">
+                  
+                <div class="owl-slider">
+                  <div id="carousel" class="owl-carousel foodtech_slider">
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/01_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/02_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/03_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/04_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/05_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/06_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/07_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="slider_img_wr">
+                      <img src="assets/images/foodtech_driver/08_preview_driver.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              
+              </div>
+            </div>
+            <div class="tab-content tab_content_fourth">
+              <div class=" center_wrapper">
+                
+               <div class="owl-slider">
+                 <div id="carousel" class="owl-carousel foodtech_slider-single">
+                   <div class="item" style="width: 689px;margin: 0 auto;">
+                    <div class="slider2_img_wr">
+                      <img src="assets/images/foodtech-admin-panel/01_preview_admin_panel.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item" style="width: 689px;margin: 0 auto;">
+                      <div class="slider2_img_wr">
+                      <img src="assets/images/foodtech-admin-panel/02_preview_admin_panel.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item" style="width: 689px;margin: 0 auto;">
+                      <div class="slider2_img_wr">
+                      <img src="assets/images/foodtech-admin-panel/03_preview_admin_panel.png" alt="">
+                      </div>
+                    </div>
+                    <div class="item" style="width: 689px;margin: 0 auto;">
+                      <div class="slider2_img_wr">
+                      <img src="assets/images/foodtech-admin-panel/01_preview_admin_panel.png" alt="">
+                      </div>
+                    </div>
+                 </div>
+                 </div>
+             
+             </div>
+            </div>
+          </div>  
+    </div>
+
+      </section>
+      <!-- apps sliders end -->
+
+      <!-- dashboard section start -->
+      <section style="margin-top: 140px;">
+        <div class="design_sec col-12">
+          <div class="col-2"></div>
+          <div class="col-8 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp888">
+            <h1>Strengthening Admin Dashboard</h1>
+            <p>With this robust and dynamic admin dashboard, managing restaurants, products, categories, orders, sliders, promotional banners, and various other features becomes effortless.</p>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="design_sec col-12" style="margin-top: 40px;">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <div class="wow slideInUp">
+            <img src="dashboard_img.png">
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </section>
+      <!-- dashboard section end -->
+
+      <!-- technology stack start -->
+      <section style="margin-top: 140px;">
+        <div class="design_sec col-12" id="technologies">
+          <div class="col-2"></div>
+          <div class="col-8 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp889">
+            <h1>Technology Stack</h1>
+            <p>Technologies that enhance project security and improve project performance.</p>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="design_sec col-12" style="margin-top: 40px;">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="wow slideInUp">
+            <img src="technology_stack.png">
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </section>
+      <!-- technology stack end -->
+
+      <!-- download app section start -->
+      <section style="margin-top: 140px;">
+        <div class="design_sec col-12" id="demo">
+          <div class="col-2"></div>
+          <div class="col-8 design_sec_txt_wp wow slideInUp">
+            <div class="design_sec_txt_nodescription rp890">
+            <h1>Try the demo and download the apps</h1>
+            <p>Take a look at our app's demo and features.</p>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="design_sec col-12" style="margin-top: 40px; margin-bottom: 40px;">
+          <div class="col-4 wow zoomIn">
+            <div class="card_mobile_store">
+              <h6>Android</h6>
+              <p>Download free app from play store</p>
+              <a href="#" target="_self" class="app_stors"><img src="assets/images/google-play-badge.png" class="" alt="" decoding="async" title="" loading="lazy"></a>
+              <div style="margin: 0 auto; display: flex; justify-content: center;">
+              <img src="assets/images/android_m.png" style="height: 300px; width: auto;" class="" alt="" decoding="async" title="" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col-4 wow zoomIn">
+            <div class="card_mobile_store">
+              <h6>iOS</h6>
+              <p>Download free app from app store</p>
+              <a href="#" target="_self" class="app_stors"><img src="assets/images/app_store.png" class="" alt="" decoding="async" title="" loading="lazy"></a>
+              <div style="margin: 0 auto; display: flex; justify-content: center;">
+              <img src="assets/images/ios_m.png" style="height: 300px; width: auto;" class="" alt="" decoding="async" title="" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col-4 wow zoomIn">
+            <div class="card_mobile_store">
+                <div style="position: relative;min-height: 457px;max-height: 457px;">
+              <h6>Admin Dashboard</h6>
+              <p>Use the details below to get a feel for the admin or store panel.</p>
+              <div>
+                <div>
+                  <div><p style="font-size: 20px;margin: 0px;">Admin Panel for Demo</p></div>
+                  <div>
+                    <div class="card_apm"><p class="mr-1">Link URL</p><a href="#">Click Here</a></div>
+                    <div class="card_apm"><p class="mr-1">Email ID</p><p>admin@admin.com</p></div>
+                    <div class="card_apm"><p class="mr-1">Password</p><p>admin123</p></div>
+                  </div>
+                </div>
+              </div>
+              <img src="dashboard_img.png" style="height: auto;width: 100%;position: absolute;bottom: 0px;left: 0px;" class="" alt="" decoding="async" title="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- download app section end -->
+      <!-- on-top button start -->
+      <button onclick="topFunction()" id="myBtn_ontop" title="Go to top">Top</button>
+      <!-- on-top button end -->
+    </div>
+    <footer>
+      <div class="col-12"><p>© 2023 DexBytes All Rights Reserved.</p></div>
+    </footer>
+    <script>
+// Get the button
+let mybutton = document.getElementById("myBtn_ontop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    <script type="text/javascript">
+      (function() {
+        var Util,
+          __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+        Util = (function() {
+          function Util() {}
+
+          Util.prototype.extend = function(custom, defaults) {
+            var key, value;
+            for (key in custom) {
+              value = custom[key];
+              if (value != null) {
+                defaults[key] = value;
+              }
+            }
+            return defaults;
+          };
+
+          Util.prototype.isMobile = function(agent) {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
+          };
+
+          return Util;
+
+        })();
+
+        this.WOW = (function() {
+          WOW.prototype.defaults = {
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true
+          };
+
+          function WOW(options) {
+            if (options == null) {
+              options = {};
+            }
+            this.scrollCallback = __bind(this.scrollCallback, this);
+            this.scrollHandler = __bind(this.scrollHandler, this);
+            this.start = __bind(this.start, this);
+            this.scrolled = true;
+            this.config = this.util().extend(options, this.defaults);
+          }
+
+          WOW.prototype.init = function() {
+            var _ref;
+            this.element = window.document.documentElement;
+            if ((_ref = document.readyState) === "interactive" || _ref === "complete") {
+              return this.start();
+            } else {
+              return document.addEventListener('DOMContentLoaded', this.start);
+            }
+          };
+
+          WOW.prototype.start = function() {
+            var box, _i, _len, _ref;
+            this.boxes = this.element.getElementsByClassName(this.config.boxClass);
+            if (this.boxes.length) {
+              if (this.disabled()) {
+                return this.resetStyle();
+              } else {
+                _ref = this.boxes;
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                  box = _ref[_i];
+                  this.applyStyle(box, true);
+                }
+                window.addEventListener('scroll', this.scrollHandler, false);
+                window.addEventListener('resize', this.scrollHandler, false);
+                return this.interval = setInterval(this.scrollCallback, 50);
+              }
+            }
+          };
+
+          WOW.prototype.stop = function() {
+            window.removeEventListener('scroll', this.scrollHandler, false);
+            window.removeEventListener('resize', this.scrollHandler, false);
+            if (this.interval != null) {
+              return clearInterval(this.interval);
+            }
+          };
+
+          WOW.prototype.show = function(box) {
+            this.applyStyle(box);
+            return box.className = "" + box.className + " " + this.config.animateClass;
+          };
+
+          WOW.prototype.applyStyle = function(box, hidden) {
+            var delay, duration, iteration;
+            duration = box.getAttribute('data-wow-duration');
+            delay = box.getAttribute('data-wow-delay');
+            iteration = box.getAttribute('data-wow-iteration');
+            return box.setAttribute('style', this.customStyle(hidden, duration, delay, iteration));
+          };
+
+          WOW.prototype.resetStyle = function() {
+            var box, _i, _len, _ref, _results;
+            _ref = this.boxes;
+            _results = [];
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              box = _ref[_i];
+              _results.push(box.setAttribute('style', 'visibility: visible;'));
+            }
+            return _results;
+          };
+
+          WOW.prototype.customStyle = function(hidden, duration, delay, iteration) {
+            var style;
+            style = hidden ? "visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;" : "visibility: visible;";
+            if (duration) {
+              style += "-webkit-animation-duration: " + duration + "; -moz-animation-duration: " + duration + "; animation-duration: " + duration + ";";
+            }
+            if (delay) {
+              style += "-webkit-animation-delay: " + delay + "; -moz-animation-delay: " + delay + "; animation-delay: " + delay + ";";
+            }
+            if (iteration) {
+              style += "-webkit-animation-iteration-count: " + iteration + "; -moz-animation-iteration-count: " + iteration + "; animation-iteration-count: " + iteration + ";";
+            }
+            return style;
+          };
+
+          WOW.prototype.scrollHandler = function() {
+            return this.scrolled = true;
+          };
+
+          WOW.prototype.scrollCallback = function() {
+            var box;
+            if (this.scrolled) {
+              this.scrolled = false;
+              this.boxes = (function() {
+                var _i, _len, _ref, _results;
+                _ref = this.boxes;
+                _results = [];
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                  box = _ref[_i];
+                  if (!(box)) {
+                    continue;
+                  }
+                  if (this.isVisible(box)) {
+                    this.show(box);
+                    continue;
+                  }
+                  _results.push(box);
+                }
+                return _results;
+              }).call(this);
+              if (!this.boxes.length) {
+                return this.stop();
+              }
+            }
+          };
+
+          WOW.prototype.offsetTop = function(element) {
+            var top;
+            top = element.offsetTop;
+            while (element = element.offsetParent) {
+              top += element.offsetTop;
+            }
+            return top;
+          };
+
+          WOW.prototype.isVisible = function(box) {
+            var bottom, offset, top, viewBottom, viewTop;
+            offset = box.getAttribute('data-wow-offset') || this.config.offset;
+            viewTop = window.pageYOffset;
+            viewBottom = viewTop + this.element.clientHeight - offset;
+            top = this.offsetTop(box);
+            bottom = top + box.clientHeight;
+            return top <= viewBottom && bottom >= viewTop;
+          };
+
+          WOW.prototype.util = function() {
+            return this._util || (this._util = new Util());
+          };
+
+          WOW.prototype.disabled = function() {
+            return !this.config.mobile && this.util().isMobile(navigator.userAgent);
+          };
+
+          return WOW;
+
+        })();
+
+      }).call(this);
+
+
+      wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset: 100
+        }
+      );
+      wow.init();
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="assets/js/tabber.js"></script>
+  </body>
+</html>
